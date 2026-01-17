@@ -19,7 +19,7 @@ export default class Parent extends React.Component{
     render(){
         return (<>
             <h1>Parent Component</h1>
-            {this.state.isLoggedin? <h2>You are Logged In !</h2>:<Child isLoggedin={this.state.isLoggedin} toggle={this.toggle} />}
+            {this.state.isLoggedin? <p>You are logged in!</p>:<Child isLoggedin={this.state.isLoggedin} toggle={this.toggle} />}
             
             </>
         );
