@@ -10,16 +10,17 @@ export default class Parent extends React.Component{
     }
     toggle=(e)=>{
         e.preventDefault();
-        
+        // console.log('clicked');
         this.setState({
             isLoggedin:!this.state.isLoggedin
         })
-        console.log(this.state.isLoggedin);
+        
     }
     render(){
         return (<>
             <h1>Parent Component</h1>
-            <Child isLoggedin={this.state.isLoggedin} toggle={this.toggle} />
+            {this.state.isLoggedin? <h2>You are Logged In !</h2>:<Child isLoggedin={this.state.isLoggedin} toggle={this.toggle} />}
+            
             </>
         );
     }
